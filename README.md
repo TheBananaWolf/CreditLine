@@ -40,6 +40,7 @@ git clone <repository-url>
 
 2. Install backend dependencies:
 ```bash
+cd Backend
 npm install
 ```
 
@@ -53,6 +54,7 @@ npm install
 
 1. Initialize the database with test users:
 ```bash
+cd Backend
 npm run init-db
 ```
 
