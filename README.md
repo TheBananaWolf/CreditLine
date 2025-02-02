@@ -121,20 +121,33 @@ The system comes with two pre-configured test users:
 
 ## Project Structure
 ```
-├── src/
-│   ├── entities/           # Database entities
-│   ├── services/          # Business logic
-│   ├── scripts/           # Database initialization
-│   └── server.ts          # Express server setup
+line-of-credit/
+├── Backend/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── database.ts         # Database configuration
+│   │   ├── entities/
+│   │   │   ├── User.ts            # User entity
+│   │   │   ├── Application.ts     # Application entity
+│   │   │   └── Transaction.ts     # Transaction entity
+│   │   ├── services/
+│   │   │   └── CreditService.ts   # Business logic
+│   │   └── scripts/
+│   │       └── initDb.ts          # Database initialization
+│   ├── server.ts                  # Express server setup
+│   ├── package.json
+│   └── tsconfig.json
 │
 ├── line-of-credit-frontend/
 │   ├── src/
-│   │   ├── services/     # API client
-│   │   ├── types/        # TypeScript types
-│   │   └── App.tsx       # Main React component
-│   └── package.json
+│   │   ├── services/
+│   │   │   └── api.ts            # API client
+│   │   ├── types.ts              # TypeScript types
+│   │   └── App.tsx              # Main React component
+│   ├── package.json
+│   └── tsconfig.json
 │
-└── package.json
+└── README.md
 ```
 
 ## Development Notes
